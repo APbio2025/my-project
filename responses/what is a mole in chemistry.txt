@@ -1,0 +1,4 @@
+A mole is a fundamental unit in chemistry that represents **6.022 × 10²³** particles (atoms, molecules, or ions) of a substance. 
+This number, known as **Avogadro’s number**, allows chemists to count particles in a measurable amount of material. 
+One mole of any substance has a mass equal to its relative atomic or molecular mass in grams. 
+For example, one mole of water (H₂O) has a mass of 18g (since H = 1g and O = 16g).

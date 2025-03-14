@@ -1,0 +1,4 @@
+A polymer is a large molecule made up of repeating subunits called monomers. 
+Polymers can be **natural** (such as DNA, proteins, and cellulose) or **synthetic** (such as plastics, nylon, and polyethylene). 
+They are classified into thermoplastics (which soften upon heating) and thermosetting plastics (which remain rigid upon heating). 
+Polymers are widely used in industries such as textiles, packaging, and biomedical engineering.
