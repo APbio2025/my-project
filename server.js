@@ -17,7 +17,7 @@ app.get("/api/message", (req, res) => {
 
 // Serve Frontend
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.htm"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, () => {
