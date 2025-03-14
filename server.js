@@ -1,55 +1,59 @@
+// server.js
 const express = require("express");
 const cors = require("cors");
-const fs = require("fs");
-const path = require("path");
-const OpenAI = require("openai");
-require("dotenv").config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+const PORT = process.env.PORT || 3000; // Use Render's dynamic port
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const CONTENT_DIR = path.join(__dirname, "content");
+app.use(cors()); // Enable CORS
+app.use(express.json()); // Parse JSON requests
 
-// New GET route for basic testing
-app.get("/chat", (req, res) => {
-    res.send("Chatbot API is running! Use POST /chat to interact.");
+// Root route test
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully!");
 });
 
-// Existing POST route for chatbot functionality
-app.post("/chat", async (req, res) => {
-    const { message } = req.body;
-    if (!message) return res.status(400).json({ error: "Message is required" });
-
-    let botResponse = await getBotResponse(message);
-    res.json({ response: botResponse });
+// Chatbot endpoint
+app.post("/chatbot", (req, res) => {
+  const { message } = req.body;
+  res.json({ response: `You said: ${message}` }); // Basic response
 });
 
-async function getBotResponse(userMessage) {
+// Listen on all network interfaces
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Chatbot API is running on port ${PORT}`);
+});
+
+
+// script.js
+const backendUrl = "https://your-backend-service.onrender.com"; // Replace with your Render URL
+
+document.getElementById("sendButton").addEventListener("click", sendMessage);
+
+async function sendMessage() {
+    const userInput = document.getElementById("userInput").value;
+    if (!userInput.trim()) return;
+
+    // Display user message
+    const chatbox = document.getElementById("chatbox");
+    chatbox.innerHTML += `<div class="user-message">${userInput}</div>`;
+
     try {
-        const files = fs.readdirSync(CONTENT_DIR);
-        let contentSummary = "Available study topics:\n";
-
-        for (const file of files) {
-            const content = fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8");
-            contentSummary += `- ${file}: ${content.substring(0, 100)}...\n`;
-        }
-
-        const completion = await openai.chat.completions.create({
-            model: "gpt-4",
-            messages: [
-                { role: "system", content: "You are an IGCSE science tutor. Answer based on the following study content." },
-                { role: "user", content: `Here are the topics:\n${contentSummary}\nQuestion: ${userMessage}` },
-            ],
+        const response = await fetch(`${backendUrl}/chatbot`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userInput })
         });
 
-        return completion.choices[0].message.content;
-    } catch (error) {
-        console.error(error);
-        return "I'm having trouble accessing study materials. Try again later.";
-    }
-}
+        const data = await response.json();
+        
+        // Display bot response
+        chatbox.innerHTML += `<div class="bot-message">${data.response}</div>`;
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Chatbot server running on port ${PORT}`));
+    } catch (error) {
+        console.error("Error:", error);
+        chatbox.innerHTML += `<div class="bot-message">Error: Backend not reachable</div>`;
+    }
+
+    document.getElementById("userInput").value = ""; // Clear input field
+}
