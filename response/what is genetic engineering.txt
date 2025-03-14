@@ -1,0 +1,3 @@
+Genetic engineering is the direct manipulation of an organism’s DNA to alter its genetic makeup. 
+This process involves techniques like recombinant DNA technology, CRISPR-Cas9 gene editing, and cloning. It is used in medicine (gene therapy), agriculture (GMO crops), and research (creating genetically modified organisms for study). 
+Genetic engineering has ethical considerations, including potential environmental impacts and safety concerns.

@@ -1,0 +1,4 @@
+A scalar quantity is a physical quantity that has **only magnitude but no direction**. 
+Examples include **speed, mass, time, temperature, energy, and volume**. 
+Scalars are contrasted with vector quantities, which have both magnitude and direction. 
+For example, speed (a scalar) measures how fast an object moves, whereas velocity (a vector) also specifies its direction.

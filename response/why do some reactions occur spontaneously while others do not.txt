@@ -1,0 +1,3 @@
+The spontaneity of a reaction depends on thermodynamic factors such as enthalpy (ΔH), entropy (ΔS), and Gibbs free energy (ΔG). 
+A reaction is spontaneous when ΔG < 0, but critical questions arise: Can non-spontaneous reactions be driven by external energy inputs (e.g., photosynthesis)? 
+Why do some spontaneous reactions occur very slowly (e.g., diamond turning into graphite)?
