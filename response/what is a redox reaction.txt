@@ -1,5 +1,0 @@
-A redox (reduction-oxidation) reaction is a type of chemical reaction that involves the transfer of electrons between substances. 
-- **Oxidation** refers to the loss of electrons (or gain of oxygen). 
-- **Reduction** refers to the gain of electrons (or loss of oxygen). 
-These reactions are essential in processes like combustion, corrosion, and cellular respiration. An example is the reaction between magnesium and oxygen: 
-Mg + O₂ → MgO, where magnesium is oxidized and oxygen is reduced.

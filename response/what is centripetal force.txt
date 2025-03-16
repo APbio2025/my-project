@@ -1,4 +1,0 @@
-Centripetal force is the force that keeps an object moving in a circular path, directed toward the center of rotation. 
-It prevents the object from moving in a straight line due to inertia. It is given by the formula: 
-F = (m * v²) / r, where **m** is mass, **v** is velocity, and **r** is the radius of the circular path. 
-Examples include the force exerted by a string on a swinging ball and the gravitational force that keeps planets in orbit.

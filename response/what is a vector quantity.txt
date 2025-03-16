@@ -1,4 +1,0 @@
-A vector quantity is a physical quantity that has both **magnitude and direction**. 
-Examples include **velocity, force, displacement, and acceleration**. 
-Vectors are represented graphically using arrows, where the length of the arrow indicates magnitude and its orientation indicates direction. 
-Vectors obey specific mathematical operations such as addition using the triangle or parallelogram method.

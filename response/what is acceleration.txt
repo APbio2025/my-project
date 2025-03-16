@@ -1,1 +1,0 @@
-Acceleration is the rate of change of velocity over time, measured in m/s².

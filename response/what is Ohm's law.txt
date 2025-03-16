@@ -1,3 +1,0 @@
-Ohm’s Law states that the current (**I**) through a conductor is directly proportional to the voltage (**V**) across it and inversely proportional to the resistance (**R**), given by: 
-V = IR. 
-This fundamental law explains the relationship between voltage, current, and resistance in electrical circuits and is used to design and analyze electrical components.

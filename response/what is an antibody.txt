@@ -1,3 +1,0 @@
-An antibody, also called an immunoglobulin, is a Y-shaped protein produced by plasma cells in response to antigens (foreign substances). 
-Antibodies bind specifically to antigens to neutralize them or mark them for destruction by the immune system. There are five classes of antibodies (IgG, IgA, IgM, IgE, IgD), each serving different immune functions. 
-They are essential for immune defense against pathogens like bacteria and viruses.
